@@ -11,7 +11,8 @@
   </head>
 
   <body>
-    <%# add navbar %>
+    <%# banner on homepage %>
+    <%= render "shared/banner" if current_page?(root_path) %>
     <%= yield %>
     <%# add footer %>
     <%= render "shared/footer" %>
