@@ -3,5 +3,5 @@ class Listing < ApplicationRecord
   has_many :offers
   has_many_attached :photos
 
-  validates :address, :category, :price_per_night, :has_pool, :has_garden, :number_of_rooms, presence: true
+  validates :address, :category, :price_per_night, :number_of_rooms, presence: true
 end
