@@ -1,4 +1,4 @@
-class ListingsController < ApplicationController
+class OfferingsController < ApplicationController
   def index
     @listings = Listing.all
   end
