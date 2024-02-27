@@ -1,4 +1,4 @@
-class ListingsController < ApplicationController
+class OfferingsController < ApplicationController
   def index
     @listings = Listing.all
   end
@@ -10,9 +10,9 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     if @listing.save
-    redirect_to listing_path(@listing)
+    redirect_to @listing_path(@listing)
     else
-      render :new, status: :unprocessable_entity
+      render :new
     end
   end
 
