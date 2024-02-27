@@ -3,11 +3,16 @@
 </div>
 
 <div class="px-4 ">
+  <%# listings list  %>
   <h3 class="pt-4 text-center pb-3">Listings</h3>
   <div class="list-card-container ">
     <% @listings.first(8).each do |listing| %>
       <%= render "shared/list-card", listing: listing %>
     <% end %>
   </div>
-  <div class="btn btn-primary btn-home my-3" ><%= link_to "See all stays", listings_index_path %></div>
+  <%# button %>
+  <div class="d-flex">
+    <span class="flex-grow-1"></span>
+    <div class="btn btn-flat btn-primary btn-home my-3 "><%= link_to "See all stays", listings_index_path %></div>
+  </div>
 </div>
