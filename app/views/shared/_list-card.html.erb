@@ -4,9 +4,9 @@
     <div class="list-card-info">
       <div>
         <h2> <%= link_to listing.address, listing %> </h2>
-        <p>{ Description of property }</p>
+        <p> <%= listing.category.capitalize %> </p>
       </div>
       <h2 class="list-card-pricing">€ <%= listing.price_per_night %></h2>
     </div>
   </div>
-<%# <% end %> 
+<%# <% end %>
