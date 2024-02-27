@@ -5,21 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
 
   <body>
-      <%# banner on homepage %>
-      <%= render "shared/navbar" %>
-      <%= render "shared/banner" if current_page?(root_path) %>
-      <div class="container">
-        <%= yield %>
-      </div>
-      <%# add footer %>
-      <%= render "shared/footer" %>
+    <%# banner on homepage %>
+    <%= render "shared/navbar" %>
+    <%= render "shared/banner" if current_page?(root_path) %>
+    <div class="container">
+      <%= yield %>
+    </div>
+    <%# add footer %>
+    <%= render "shared/footer" %>
   </body>
 
 </html>
