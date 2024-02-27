@@ -1,0 +1,44 @@
+.list-card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1em;
+}
+
+.list-card {
+  overflow: hidden;
+  background: white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+}
+
+.list-card > img {
+  height: 200px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.list-card h2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.list-card p {
+  font-size: 12px;
+  opacity: .7;
+  margin: 0;
+}
+
+.list-card .list-card-info {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  position: relative;
+}
+
+// .list-card-info .list-card-owner {
+//   position: absolute;
+//   right: 16px;
+//   top: -20px;
+//   width: 40px;
+// }
