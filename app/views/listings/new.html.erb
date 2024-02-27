@@ -1,2 +1,10 @@
-<h1>Listings#new</h1>
-<p>Find me in app/views/listings/new.html.erb</p>
+<h1>Here you can create a new listing!</h1>
+<%= simple_form_for(@listing) do |f| %>
+  <%= f.input :address %>
+  <%= f.input :category %>
+  <%= f.input :price_per_night %>
+  <%= f.input :has_pool %>
+  <%= f.input :has_garden %>
+  <%= f.input :number_of_rooms %>
+  <%= f.submit %>
+<% end %>
