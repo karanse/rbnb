@@ -7,3 +7,5 @@ pin "@hotwired/stimulus-loading", to: "stimulus-loading.js"
 pin_all_from "app/javascript/controllers", under: "controllers"
 pin "bootstrap" # @5.3.3
 pin "@popperjs/core", to: "@popperjs--core.js" # @2.11.8
+pin "mapbox-gl" # @3.1.2
+pin "process" # @2.0.1
