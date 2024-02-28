@@ -1,0 +1,11 @@
+<h2 class="pb-2">Submit your reservation request</h2>
+
+<div id="reservation-form">
+  <%# note -- start & end_date/total_price are not yet connected, so don't work %>
+  <%= simple_form_for [@listing, @offer] do |f| %>
+    <%= f.input :start_date %>
+    <%= f.input :end_date %>
+    <%= f.input :comment %>
+    <%= f.submit "submit request", class: "btn btn-primary"%>
+  <% end %>
+</div>
