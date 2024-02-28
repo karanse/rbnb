@@ -1,1 +1,30 @@
+<div id = "listingheader">
+  <h1>Details of this listing </h1>
+</div>
 
+  <%= cl_image_tag @listing.photos.first.key, height: 400, width: 400, crop: :fill %>
+  <p class ="listingDetails">Address:</p>
+  <p><%= @listing.address %></p>
+  <p class ="listingDetails">Category:</p>
+  <p><%= @listing.category %></p>
+  <p class ="listingDetails">Rating:</p>
+  <p><%= @listing.rating %></p>
+  <p class ="listingDetails">Price er night:</p>
+  <p><%= @listing.price_per_night %></p>
+  <p class ="listingDetails">Has a pool? </p>
+  <%if @listing.has_pool %>
+    <p>✅</p>
+    <% else %>
+    <p>❌</p>
+  <% end %>
+  <p class ="listingDetails">Has a garden? </p>
+  <% if @listing.has_garden %>
+    <p>✅</p>
+    <% else %>
+    <p>❌</p>
+  <% end %>
+  <p class ="listingDetails">Number of rooms?</p>
+  <p><%= @listing.number_of_rooms %></p>
+<div class ="listingbutton">
+<p><%= link_to "Back To All Listings",listings_path %></p>
+</div>
