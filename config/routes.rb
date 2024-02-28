@@ -12,7 +12,9 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  resources :listings, only: [:index, :new, :create, :show]
+  resources :listings, only: [ :index, :new, :create, :show ] do
+    resources :offers, only: [ :new, :create ]
+  end
 
   get '/dashboard', to: 'pages#dashboard'
 end

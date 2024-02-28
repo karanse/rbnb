@@ -1,0 +1,12 @@
+<%= form_with url: "/", method: :get do |form| %>
+  <%= form.label :query, "Location:" %>
+  <% addresses = Listing.distinct.pluck(:address) %>
+  <%= form.select :query, addresses, { include_blank: "Select an address" } %>
+  <%= form.label :check_in, "Check in:" %>
+  <%= form.date_field :check_in %>
+  <%= form.label :check_out, "Check out:" %>
+  <%= form.date_field :check_out %>
+  <%= form.label :who, "Rooms:" %>
+  <%= form.text_field :who %>
+  <%= form.submit "Search" %>
+<% end %>
