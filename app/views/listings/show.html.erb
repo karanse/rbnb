@@ -11,7 +11,7 @@
     <li class="list-group-item">Rooms: <%= @listing.number_of_rooms %></li>
     <li class="list-group-item">Pool: <%= @listing.has_pool ? "yes" : "no" %></li>
     <li class="list-group-item">Garden: <%= @listing.has_garden ? "yes" : "no" %></li>
-    <li class="list-group-item">Rating: <%= "⭐" * @listing.rating %></li>
+    <li class="list-group-item">Rating: <%= @listing.rating.nil? ? "no rating" : "⭐️" * @listing.rating %></li>
   </ul>
 </div>
 
