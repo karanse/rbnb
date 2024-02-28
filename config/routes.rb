@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :flats
   get 'listings/index'
   get 'listings/new'
   get 'listings/create'
