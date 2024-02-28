@@ -12,13 +12,14 @@ class OffersController < ApplicationController
   end
 
   def create
-    # @offer = Offer.new(offer_params)
-    # @offer.listing = @listing
-    # if @offer.save
-    #   redirect_to listing_path(@listing)
-    # else
-    #   render :new, status: :unprocessable_entity
-    # end
+    @offer = Offer.new(offer_params)
+    @offer.listing = @listing
+    @offer.user = current_user
+    if @offer.save
+      redirect_to listing_path(@listing)
+    else
+      render :new, status: :unprocessable_entity
+    end
   end
 
   def show; end
@@ -34,6 +35,6 @@ class OffersController < ApplicationController
   end
 
   def offer_params
-    params.require(:offer).permit(:listing_id)
+    params.require(:offer).permit(:comment, :start_date, :end_date, :total_price)
   end
 end
