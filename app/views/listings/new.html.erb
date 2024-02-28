@@ -6,6 +6,6 @@
   <%= f.input :has_pool %>
   <%= f.input :has_garden %>
   <%= f.input :number_of_rooms %>
-  <%= f.input :photos, as: :file %>
+  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>
