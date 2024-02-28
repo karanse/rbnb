@@ -1,10 +1,18 @@
-<div class="px-4 pt-5 border-bottom">
+<div class="px-4 border-bottom">
   <%= render "shared/home-features" %>
 </div>
 
 <div class="px-4 ">
-  <h3 class="pt-4 text-center">Listings</h3>
+  <%# listings list  %>
+  <h3 class="pt-5 text-center pb-4">Listings</h3>
   <div class="list-card-container ">
-    <%= render "shared/list-card" %>
+    <% @listings.first(8).each do |listing| %>
+      <%= render "shared/list-card", listing: listing %>
+    <% end %>
+  </div>
+  <%# button %>
+  <div class="d-flex">
+    <span class="flex-grow-1"></span>
+    <div class="btn btn-flat btn-primary btn-home my-3 "><%= link_to "See all stays", listings_index_path %></div>
   </div>
 </div>
