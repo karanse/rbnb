@@ -1,7 +1,5 @@
-<div id = "listingheader">
-  <h1>Details of this listing </h1>
-</div>
-
+<h2> Details of this home </h2>
+<div>
   <%= cl_image_tag @listing.photos.first.key, height: 400, width: 400, crop: :fill %>
   <p class ="listingDetails">Address:</p>
   <p><%= @listing.address %></p>
@@ -25,6 +23,7 @@
   <% end %>
   <p class ="listingDetails">Number of rooms?</p>
   <p><%= @listing.number_of_rooms %></p>
+</div>
 <div class ="listing-button">
-<p><%= link_to "Back To All Listings",listings_path %></p>
+  <p><%= link_to "Back To All Listings",listings_path %></p>
 </div>
