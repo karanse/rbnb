@@ -1,0 +1,35 @@
+#listingheader {
+  background-color: #ffffff;
+  color:#000000;
+  padding: 20px;
+  text-align: center;
+}
+#listingheader h1 {
+  margin: 0;
+  font-size: 24px;
+}
+
+.listingDetails {
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.listingbutton a {
+  text-decoration: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #5f0f40;
+  transition: background-color 0.3s;
+  display: inline-block;
+}
+
+.listingbutton a:hover {
+  background-color: #9a031e;
+}
+.listingscontainer {
+  background-color: #ffffff;
+  color:#000000;
+  padding: 20px;
+  text-align: center;
+}
