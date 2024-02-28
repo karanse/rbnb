@@ -1,4 +1,19 @@
-<h2> Details of this home </h2>
+<h2> Details of this <%= @listing.category %> </h2>
+
+<div class="container">
+  <%= cl_image_tag @listing.photos.first.key, height: 300, width: 300, crop: :auto %>
+</div>
+
+<div class="stay-details-list">
+  <ul class="list-group mt-3">
+    <li class="list-group-item">Address: <%= @listing.address %></li>
+    <li class="list-group-item">Price per night: EUR <%= @listing.price_per_night %></li>
+    <li class="list-group-item">Rooms: <%= @listing.number_of_rooms %></li>
+    <li class="list-group-item">Pool: <%= @listing.has_pool ? "yes" : "no" %></li>
+    <li class="list-group-item">Garden: <%= @listing.has_garden ? "yes" : "no" %></li>
+    <li class="list-group-item">Rating: <%= "⭐" * @listing.rating %></li>
+  </ul>
+</div>
 
 <div class="d-flex align-items-center">
   <div class="btn btn-flat btn-primary btn-home my-3"><%= link_to "Make booking request", new_listing_offer_path(@listing, @offer) %></div>
