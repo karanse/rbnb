@@ -1,4 +1,4 @@
-<%= form_with url: "/", method: :get do |form| %>
+<%= form_with url: "/listings", method: :get do |form| %>
   <%= form.label :query, "Where:" %>
   <% addresses = Listing.distinct.pluck(:address) %>
   <%= form.select :query, addresses, { include_blank: "Select an address" } %>
