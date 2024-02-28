@@ -1,6 +1,8 @@
 <h1 class="pb-2">All listings</h1>
 <p class="pb-2">Your <strong>dream home</strong> is just one click away.</p>
 
+<%= render 'search_form' %>
+
 <div class="list-card-container ">
   <% @listings.each do |listing| %>
     <%= render "shared/list-card", listing: listing %>
