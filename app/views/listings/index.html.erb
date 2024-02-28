@@ -1,8 +1,9 @@
-<h1 class="pb-2">All listings</h1>
-<p class="pb-2">Your <strong>dream home</strong> is just one click away.</p>
+<h1 class="pb-2">Search your dream stay</h1>
+<p class="pb-1">Your <strong>dream home</strong> is just one click away.</p>
 
 <%= render 'search_form' %>
 
+<h1 class="py-2">All listings</h1>
 <div class="list-card-container ">
   <% @listings.each do |listing| %>
     <%= render "shared/list-card", listing: listing %>
