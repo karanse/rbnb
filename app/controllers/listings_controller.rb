@@ -9,6 +9,7 @@ class ListingsController < ApplicationController
 
   def create
     @listing = Listing.new(listing_params)
+    @listing.user = current_user # current_user comes from devise authentication
     if @listing.save
       redirect_to listing_path(@listing)
     else
@@ -24,6 +25,5 @@ class ListingsController < ApplicationController
 
   def listing_params
     params.require(:listing).permit(:address, :category, :rating, :price_per_night, :has_pool, :has_garden, :number_of_rooms, photos: [])
-
   end
 end
