@@ -1,4 +1,6 @@
 class Listing < ApplicationRecord
+  CATEGORIES = ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"]
+
   belongs_to :user
   has_many :offers
   has_many_attached :photos

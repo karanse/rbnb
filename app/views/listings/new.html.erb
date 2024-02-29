@@ -1,11 +1,11 @@
 <h2>Add your home</h2>
 <%= simple_form_for(@listing) do |f| %>
   <%= f.input :address %>
-  <%= f.input :category %>
+  <%= f.input :category, as: :select, collection: Listing::CATEGORIES %>
   <%= f.input :price_per_night %>
   <%= f.input :has_pool %>
   <%= f.input :has_garden %>
   <%= f.input :number_of_rooms %>
   <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit %>
+  <%= f.submit class: "btn btn-primary"%>
 <% end %>
