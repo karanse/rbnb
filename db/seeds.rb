@@ -22,7 +22,9 @@ user1 = User.create!(first_name: "sema",
 
 5.times do
   listing = Listing.new(address: Faker::Address.full_address,
-                        category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
+                        city: Faker::Address.city,
+                        country: Faker::Address.country,
+                        category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
                         has_pool: [true, false].sample,
@@ -47,7 +49,9 @@ user2 = User.create!(first_name: "Loes",
                      )
 5.times do
   listing = Listing.new(address: Faker::Address.full_address,
-                        category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
+                        city: Faker::Address.city,
+                        country: Faker::Address.country,
+                        category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
                         has_pool: [true, false].sample,
@@ -73,7 +77,9 @@ user3 = User.create!(first_name: "Allison",
 
 5.times do
   listing = Listing.new(address: Faker::Address.full_address,
-                        category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
+                        city: Faker::Address.city,
+                        country: Faker::Address.country,
+                        category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
                         has_pool: [true, false].sample,
@@ -98,7 +104,9 @@ user4 = User.create!(first_name: "Heiddis",
                      )
 5.times do
   listing = Listing.new(address: Faker::Address.full_address,
-                        category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
+                        city: Faker::Address.city,
+                        country: Faker::Address.country,
+                        category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
                         has_pool: [true, false].sample,

@@ -1,5 +1,5 @@
 class Listing < ApplicationRecord
-  CATEGORIES = ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"]
+  CATEGORIES = ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"]
 
   belongs_to :user
   has_many :offers
