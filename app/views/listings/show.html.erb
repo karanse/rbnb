@@ -1,5 +1,5 @@
 <%# ------------------------PHOTOS------------------------------ %>
-<div id="carousel-container-show" class="pb-5">
+<div id="carousel-container-show" class="pb-3">
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
     <div class="carousel-inner">
       <% @listing.photos.each_with_index do |photo, index| %>
@@ -14,16 +14,16 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
 </div>
 
 <%# ------------------------HEADER------------------------------ %>
 
-<h2 class="text-center py-5"> Details of this <%= @listing.category.downcase %> <%= @listing.rating.nil? ? "" : "⭐️" * @listing.rating %> </h2>
+<h2 class="text-center py-3"> Details of this <%= @listing.category.downcase %> <%= @listing.rating.nil? ? "" : "⭐️" * @listing.rating %> </h2>
 
-<%# ------------------------DETAILS------------------------------ %>
 <div class="d-flex flex-column align-items-center">
   <div class="w-50">
-
+  <%# ------------------------DETAILS------------------------------ %>
     <div class="card mb-3 text-center">
       <div class="card-header">
         <h5 class="pt-2">Address</h5>
@@ -62,13 +62,10 @@
       </div>
     </div>
   </div>
-
-<%# ------------------------BUTTONS------------------------------ %>
-
+  <%# ------------------------BUTTONS------------------------------ %>
   <div class="d-flex align-items-center">
     <div class="btn btn-flat btn-primary btn-home my-3"><%= link_to "Make booking request", new_listing_offer_path(@listing, @offer) %></div>
     <div class="btn btn-flat btn-primary btn-home mx-3 my-3"><%= link_to "Back to all", listings_index_path %></div>
     <span class="flex-grow-1"></span>
   </div>
-
 </div>
