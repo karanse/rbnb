@@ -12,7 +12,7 @@ User.destroy_all
 
 puts "Creating sample listing data..."
 #  Columns address, category, rating, price_per_night, has_pool, has_garden, number_of_rooms
-url = "https://source.unsplash.com/random/1600x1200/?interior"
+url = "https://source.unsplash.com/random/600X600/?interior"
 
 user1 = User.create!(first_name: "sema",
                      last_name: "karan",
@@ -21,7 +21,7 @@ user1 = User.create!(first_name: "sema",
                      )
 
 5.times do
-  listing = Listing.new(address: Faker::Address.full_address,
+  listing = Listing.new(address: Faker::Address.street_address,
                         city: Faker::Address.city,
                         country: Faker::Address.country,
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
@@ -30,6 +30,7 @@ user1 = User.create!(first_name: "sema",
                         has_pool: [true, false].sample,
                         has_garden: [false, true].sample,
                         number_of_rooms: rand(1..5))
+
   listing.user = user1
   file1 = URI.open(url)
   file2 = URI.open(url)
@@ -48,7 +49,7 @@ user2 = User.create!(first_name: "Loes",
                      password: "1234test"
                      )
 5.times do
-  listing = Listing.new(address: Faker::Address.full_address,
+  listing = Listing.new(address: Faker::Address.street_address,
                         city: Faker::Address.city,
                         country: Faker::Address.country,
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
@@ -76,7 +77,7 @@ user3 = User.create!(first_name: "Allison",
                      )
 
 5.times do
-  listing = Listing.new(address: Faker::Address.full_address,
+  listing = Listing.new(address: Faker::Address.street_address,
                         city: Faker::Address.city,
                         country: Faker::Address.country,
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
@@ -103,7 +104,7 @@ user4 = User.create!(first_name: "Heiddis",
                      password: "1234test"
                      )
 5.times do
-  listing = Listing.new(address: Faker::Address.full_address,
+  listing = Listing.new(address: Faker::Address.street_address,
                         city: Faker::Address.city,
                         country: Faker::Address.country,
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
