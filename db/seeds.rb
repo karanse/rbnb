@@ -21,7 +21,7 @@ user1 = User.create!(first_name: "sema",
                      )
 
 5.times do
-  listing = Listing.new(address: Faker::Address.street_address,
+  listing = Listing.new(address: Faker::Address.full_address,
                         category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -46,7 +46,7 @@ user2 = User.create!(first_name: "Loes",
                      password: "1234test"
                      )
 5.times do
-  listing = Listing.new(address: Faker::Address.street_address,
+  listing = Listing.new(address: Faker::Address.full_address,
                         category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -72,7 +72,7 @@ user3 = User.create!(first_name: "Allison",
                      )
 
 5.times do
-  listing = Listing.new(address: Faker::Address.street_address,
+  listing = Listing.new(address: Faker::Address.full_address,
                         category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -97,7 +97,7 @@ user4 = User.create!(first_name: "Heiddis",
                      password: "1234test"
                      )
 5.times do
-  listing = Listing.new(address: Faker::Address.street_address,
+  listing = Listing.new(address: Faker::Address.full_address,
                         category: ["house", "apartment", "guesthouse", "cottage", "cabin", "yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
