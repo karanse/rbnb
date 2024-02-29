@@ -1,13 +1,13 @@
 .list-card-container {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  gap: 1em;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3em;
 }
 
 .list-card {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
 .list-card > .img {
@@ -21,6 +21,10 @@
   font-size: 16px;
   font-weight: bold;
   margin: 0;
+}
+
+.list-card a {
+  text-decoration: none;
 }
 
 .list-card p {
