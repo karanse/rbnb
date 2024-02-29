@@ -1,0 +1,15 @@
+// #footer {
+//   position: sticky;
+//   bottom: 0;
+//   width: 100%;
+//  }
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-bottom: 250px;
+}
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
