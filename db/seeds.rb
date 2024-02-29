@@ -29,8 +29,12 @@ user1 = User.create!(first_name: "sema",
                         has_garden: [false, true].sample,
                         number_of_rooms: rand(1..5))
   listing.user = user1
-  file = URI.open(url)
-  listing.photos.attach(io: file, filename: "home.png", content_type: "image/png")
+  file1 = URI.open(url)
+  file2 = URI.open(url)
+  file3 = URI.open(url)
+  listing.photos.attach(io: file1, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file2, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file3, filename: "home.png", content_type: "image/png")
   listing.save!
 end
 
@@ -50,8 +54,12 @@ user2 = User.create!(first_name: "Loes",
                         has_garden: [false, true].sample,
                         number_of_rooms: rand(1..5))
   listing.user = user2
-  file = URI.open(url)
-  listing.photos.attach(io: file, filename: "home.png", content_type: "image/png")
+  file1 = URI.open(url)
+  file2 = URI.open(url)
+  file3 = URI.open(url)
+  listing.photos.attach(io: file1, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file2, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file3, filename: "home.png", content_type: "image/png")
   listing.save!
 end
 
@@ -72,8 +80,12 @@ user3 = User.create!(first_name: "Allison",
                         has_garden: [false, true].sample,
                         number_of_rooms: rand(1..5))
   listing.user = user3
-  file = URI.open(url)
-  listing.photos.attach(io: file, filename: "home.png", content_type: "image/png")
+  file1 = URI.open(url)
+  file2 = URI.open(url)
+  file3 = URI.open(url)
+  listing.photos.attach(io: file1, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file2, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file3, filename: "home.png", content_type: "image/png")
   listing.save!
 end
 
@@ -93,8 +105,12 @@ user4 = User.create!(first_name: "Heiddis",
                         has_garden: [false, true].sample,
                         number_of_rooms: rand(1..5))
   listing.user = user4
-  file = URI.open(url)
-  listing.photos.attach(io: file, filename: "home.png", content_type: "image/png")
+  file1 = URI.open(url)
+  file2 = URI.open(url)
+  file3 = URI.open(url)
+  listing.photos.attach(io: file1, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file2, filename: "home.png", content_type: "image/png")
+  listing.photos.attach(io: file3, filename: "home.png", content_type: "image/png")
   listing.save!
 end
 
