@@ -8,18 +8,24 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <link href="https://api.mapbox.com/mapbox-gl-js/v2.11.0/mapbox-gl.css" rel="stylesheet">
     <%= javascript_importmap_tags %>
+
   </head>
 
-
   <body>
-    <%# banner on homepage %>
+    <%# navbar %>
     <%= render "shared/navbar" %>
+    <%# banner on homepage %>
     <%= render "shared/banner" if current_page?(root_path) %>
-    <div class="container mt-5">
+    <%# body  %>
+    <div class=" container mt-5">
       <%= yield %>
     </div>
     <%# add footer %>
     <%= render "shared/footer" %>
+    <%# scripts %>
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
   </body>
 
 </html>
