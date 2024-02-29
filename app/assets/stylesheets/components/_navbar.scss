@@ -22,10 +22,10 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
-.navbar-nav:last-child .nav-link {
+.navbar-nav .nav-item:last-child .nav-link {
   margin-right: 0;
 }
 
