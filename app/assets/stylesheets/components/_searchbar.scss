@@ -1,17 +1,4 @@
 .searchbar {
-  font-family: "Lato", "Helvetica", "sans-serif";
   padding: 10px 20px;
-  width: 50%;
-  #submitbutton {
-    background-color:#5F0F40;
-    color: white;
-    padding: 14px 14px;
-    margin: 10px 10px;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-    &:hover {
-      background-color: #480b31;
-  }
-  }
+  width: 90%;
 }

@@ -4,7 +4,7 @@
 <%= render 'search_form' %>
 
 <h1 class="py-2">All listings</h1>
-<div class="list-card-container ">
+<div class="list-card-container">
   <% @listings.each do |listing| %>
     <%= render "shared/list-card", listing: listing %>
   <% end %>
