@@ -6,3 +6,12 @@
   text-align: center;
   font-family: "Open Sans", sans-serif;
 }
+
+#map {
+  position: sticky;
+  top: 0;
+}
+
+.list-index {
+  flex-grow: 1;
+}
