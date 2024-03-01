@@ -2,8 +2,13 @@
   <%= form_with url: "/", method: :get do |form| %>
     <div class="d-flex justify-content-between align-items-center">
         <%= form.label :query, "Location:" %>
-        <% addresses = Listing.distinct.pluck(:address) %>
-        <%= form.select :query, addresses, { include_blank: "Select an address" }, class:"form-control my-3 mr-2 search-first-row" %>
+
+         <%= text_field_tag :query,
+            params[:query],
+            class: "form-control my-3 mr-2 search-first-row",
+            placeholder: "City or country"
+          %>
+
         <%= form.label :who, "Rooms:" %>
         <%= form.text_field :who, class:"form-control search-first-row my3" %>
     </div>
