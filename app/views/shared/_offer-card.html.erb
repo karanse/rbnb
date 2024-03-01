@@ -1,0 +1,9 @@
+  <div class="list-card">
+    <div class="img" style="background-image: url('<%= offer.listing.photos.attached? ? (cl_image_path offer.listing.photos.first.key) : 'https://source.unsplash.com/random/?vacation'%>')"> </div>
+    <div class="offer-card-info">
+      <p>Address: <%= offer.listing.address %></p>
+      <p>Guest: <%= offer.user.first_name %> <%= offer.user.last_name %></p>
+      <%= link_to "Accept", "#" %>
+      <%= link_to "Delete", "#" %>
+    </div>
+  </div>

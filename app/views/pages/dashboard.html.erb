@@ -1,0 +1,8 @@
+<h1>All offers of this property </h1>
+
+<h1 class="py-2">All offers</h1>
+<div class="list-card-container">
+  <% @offers.each do |offer| %>
+    <%= render "shared/offer-card", offer: offer %>
+  <% end %>
+</div>

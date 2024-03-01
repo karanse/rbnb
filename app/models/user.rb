@@ -5,6 +5,7 @@ class User < ApplicationRecord
         :recoverable, :rememberable, :validatable
   has_many :listings
   has_many :offers
+  has_many :received_offers, through: :listings, source: :offers
 
   validates :first_name, :last_name, presence: true
 end
