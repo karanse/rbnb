@@ -53,9 +53,9 @@ user1 = User.create!(first_name: "sema",
                      )
 
 5.times do
-  listing = Listing.new(address: address.sample,
-                        # city: Faker::Address.city,
-                        # country: Faker::Address.country,
+  listing = Listing.new(address: address.sample[0],
+                        city: address.sample[1],
+                        country: address.sample[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -81,9 +81,9 @@ user2 = User.create!(first_name: "Loes",
                      password: "1234test"
                      )
 5.times do
-  listing = Listing.new(address: address.sample,
-                        # city: Faker::Address.city,
-                        # country: Faker::Address.country,
+  listing = Listing.new(address: address.sample[0],
+                        city: address.sample[1],
+                        country: address.sample[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -109,9 +109,9 @@ user3 = User.create!(first_name: "Allison",
                      )
 
 5.times do
-  listing = Listing.new(address: address.sample,
-                        # city: Faker::Address.city,
-                        # country: Faker::Address.country,
+  listing = Listing.new(address: address.sample[0],
+                        city: address.sample[1],
+                        country: address.sample[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -136,9 +136,9 @@ user4 = User.create!(first_name: "Heiddis",
                      password: "1234test"
                      )
 5.times do
-  listing = Listing.new(address: address.sample,
-                        # city: Faker::Address.city,
-                        # country: Faker::Address.country,
+  listing = Listing.new(address: address.sample[0],
+                        city: address.sample[1],
+                        country: address.sample[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
