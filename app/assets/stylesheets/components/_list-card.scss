@@ -4,10 +4,17 @@
   gap: 3em;
 }
 
+// @media screen and (max-width: 768px) {
+//   .list-card-container {
+//     grid-template-columns: 1fr; /* Adjusted to display one item per row on mobile devices */
+//   }
+// }
+
 .list-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  // width: 100%;
 }
 
 .list-card > .img {
