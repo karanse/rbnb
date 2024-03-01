@@ -14,10 +14,9 @@
   margin-left: auto;
 }
 
-.navbar-nav .btn {
+.navbar-nav {
   padding: 10px 20px;
-  background-color: #5f0f40;
-  color: #fff !important;
+  color: #fff;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -32,12 +31,37 @@
 .navbar-nav .btn.btn-primary {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
-.avatar {
-  border: 1px solid #5f0f40; /* You can adjust the border width and color as needed */
-  border-radius: 50%;
-  background-color: #c7c7c7; /* This creates a circular border */
-}
+
+.btn {
+    padding: 10px 20px;
+    background-color: #5f0f40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-right: 20px;
+  }
+
+  .avatar {
+    border: 1px solid #5f0f40;
+    border-radius: 50%;
+    background-color: #c7c7c7;
+  }
 
 .avatar:hover {
   background-color: #b17f9e;
+}
+
+.btn.btn-outline-secondary {
+  border: 2px solid #5f0f40;
+  background-color: #F4F4F4;
+  color: #5f0f40;
+}
+
+.navbar-nav .btn.btn-outline-secondary {
+  color: #5f0f40;
+}
+.btn.btn-outline-secondary:hover {
+  background-color: #c7c7c7
 }
