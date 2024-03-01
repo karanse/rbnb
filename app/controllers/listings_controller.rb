@@ -1,6 +1,12 @@
 class ListingsController < ApplicationController
   def index
     @listings = Listing.all
+    @markers = @flats.geocoded.map do |flat|
+      {
+        lat: flat.latitude,
+        lng: flat.longitude
+      }
+    end
   end
 
   def new
