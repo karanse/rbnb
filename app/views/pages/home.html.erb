@@ -5,7 +5,7 @@
 <div class="px-4 ">
   <%# listings list  %>
   <h3 class="pt-5 text-center pb-4">Listings</h3>
-  <div class="list-card-container ">
+  <div class="list-card-container">
     <% @listings.first(6).each do |listing| %>
       <%= render "shared/list-card", listing: listing %>
     <% end %>
