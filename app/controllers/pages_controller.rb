@@ -6,6 +6,12 @@ class PagesController < ApplicationController
   end
 
   def dashboard
-    @offers = current_user.received_offers
+    @offers = current_user.received_offers.reject { |offer| offer.status == "rejected" }
+
   end
+
+
+
+
+
 end

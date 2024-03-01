@@ -10,23 +10,26 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="btn btn-primary" aria-current="page" href="/listings/new">Add a home</a>
-        </li>
-
-        <li class="nav-item">
-          <% if  user_signed_in? %>
+          <% if user_signed_in? %>
+            <li class="nav-item">
               <%= button_to(
                 "Log out",
                 destroy_user_session_path,
-                method: :delete, class: "btn btn-outline-primary")%>
-
-            <%# <a class="nav-link" href="/users/sign_out">Log out</a> %>
+                method: :delete, class: "btn btn-outline-secondary") %>
+            </li>
+            <li class="nav-item">
+              <a class="btn btn-primary" aria-current="page" href="/listings/new">Add a home</a>
+            </li>
+            <li>
+              <a href="/dashboard">
+                <%= image_tag "https://robohash.org/#{current_user.email}?set=set4", :class => "avatar" %>
+              </a>
+            </li>
           <% else %>
-            <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
-            <%# <a class="nav-link" href="/users/sign_in">Log in</a> %>
+            <li class="nav-item">
+              <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
+            </li>
           <% end %>
-        </li>
       </ul>
     </div>
   </div>
