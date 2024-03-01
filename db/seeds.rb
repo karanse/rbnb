@@ -15,7 +15,7 @@ puts "Creating sample listing data..."
 url = "https://source.unsplash.com/random/600X600/?interior"
 
 address = [["Prinsengracht 328 - 332", "Amsterdam", "Netherlands"], ["'s-Gravesandestraat 55", "Amsterdam", "Netherlands"],
-           ["Valkenburgerstraat 14", "Amsterdam", "Netherlands"],["Jan Luykenstraat 58", "Amsterdam", "Netherlands"],
+           ["Valkenburgerstraat 14", "Amsterdam", "Netherlands"], ["Jan Luykenstraat 58", "Amsterdam", "Netherlands"],
            ["Sarphatistraat 47", "Amsterdam", "Netherlands"], ["Nieuwe Doelenstraat 24", "Amsterdam", "Netherlands"],
            ["Via dei Prefetti 19", "Rome", "Italy"], ["Via M. Dionigi 16", "Rome", "Italy"],
            ["Via Dei Pettinari 6", "Rome", "Italy"],
@@ -53,9 +53,10 @@ user1 = User.create!(first_name: "sema",
                      )
 
 5.times do
-  listing = Listing.new(address: address.sample[0],
-                        city: address.sample[1],
-                        country: address.sample[2],
+  listing_address = address.sample
+  listing = Listing.new(address: listing_address[0],
+                        city: listing_address[1],
+                        country: listing_address[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -80,10 +81,12 @@ user2 = User.create!(first_name: "Loes",
                      email: "hello.Loes@gmail.com",
                      password: "1234test"
                      )
+
 5.times do
-  listing = Listing.new(address: address.sample[0],
-                        city: address.sample[1],
-                        country: address.sample[2],
+  listing_address = address.sample
+  listing = Listing.new(address: listing_address[0],
+                        city: listing_address[1],
+                        country: listing_address[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -109,9 +112,10 @@ user3 = User.create!(first_name: "Allison",
                      )
 
 5.times do
-  listing = Listing.new(address: address.sample[0],
-                        city: address.sample[1],
-                        country: address.sample[2],
+  listing_address = address.sample
+  listing = Listing.new(address: listing_address[0],
+                        city: listing_address[1],
+                        country: listing_address[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
@@ -136,9 +140,10 @@ user4 = User.create!(first_name: "Heiddis",
                      password: "1234test"
                      )
 5.times do
-  listing = Listing.new(address: address.sample[0],
-                        city: address.sample[1],
-                        country: address.sample[2],
+  listing_address = address.sample
+  listing = Listing.new(address: listing_address[0],
+                        city: listing_address[1],
+                        country: listing_address[2],
                         category: ["House", "Apartment", "Guesthouse", "Cottage", "Cabin", "Yurt"].sample,
                         rating: rand(0..5),
                         price_per_night: rand(20..200),
