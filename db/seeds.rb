@@ -45,7 +45,6 @@ address = [["Prinsengracht 328 - 332", "Amsterdam", "Netherlands"], ["'s-Gravesa
            ["Avenida Duque de Loule, 51, Santo Antonio", "Lisbon", "Portugal"],
            ["27 Rua Maria da Fonte, Arroios", "Lisbon", "Portugal"]
           ]
-
 user1 = User.create!(first_name: "sema",
                      last_name: "karan",
                      email: "hello.rbnb@gmail.com",
@@ -73,6 +72,9 @@ user1 = User.create!(first_name: "sema",
   listing.photos.attach(io: file3, filename: "home.png", content_type: "image/png")
   listing.save!
 end
+
+Offer.create!(user: user1, listing: Listing.all.sample)
+Offer.create!(user: user1, listing: Listing.all.sample)
 
 puts "user1 saved"
 
@@ -103,6 +105,9 @@ user2 = User.create!(first_name: "Loes",
   listing.save!
 end
 
+Offer.create!(user: user2, listing: Listing.all.sample)
+Offer.create!(user: user2, listing: Listing.all.sample)
+
 puts "user2 saved"
 
 user3 = User.create!(first_name: "Allison",
@@ -132,6 +137,8 @@ user3 = User.create!(first_name: "Allison",
   listing.save!
 end
 
+Offer.create!(user: user3, listing: Listing.all.sample)
+Offer.create!(user: user3, listing: Listing.all.sample)
 puts "user3 saved"
 
 user4 = User.create!(first_name: "Heiddis",
@@ -159,6 +166,9 @@ user4 = User.create!(first_name: "Heiddis",
   listing.photos.attach(io: file3, filename: "home.png", content_type: "image/png")
   listing.save!
 end
+
+Offer.create!(user: user4, listing: Listing.all.sample)
+Offer.create!(user: user4, listing: Listing.all.sample)
 
 puts "user4 saved"
 
