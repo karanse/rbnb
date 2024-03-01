@@ -13,9 +13,8 @@
         <li class="nav-item">
           <a class="btn btn-primary" aria-current="page" href="/listings/new">Add a home</a>
         </li>
-
+        <% if  user_signed_in? %>
         <li class="nav-item">
-          <% if  user_signed_in? %>
               <%= button_to(
                 "Log Out",
                 destroy_user_session_path,
@@ -26,6 +25,12 @@
             <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
             <%# <a class="nav-link" href="/users/sign_in">Log in</a> %>
           <% end %>
+        </li>
+          <% if user_signed_in? %>
+         <li>
+            <a href="/dashboard">
+             <%= image_tag "https://robohash.org/#{current_user.email}?set=set4", :class => "avatar" %>
+             <% end %>
         </li>
       </ul>
     </div>

@@ -1,6 +1,6 @@
 .navbar-lewagon {
   justify-content: space-between;
-  background: white;
+  background: #F4F4F4;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -31,4 +31,13 @@
 
 .navbar-nav .btn.btn-primary {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+.avatar {
+  border: 1px solid #5f0f40; /* You can adjust the border width and color as needed */
+  border-radius: 50%;
+  background-color: #c7c7c7; /* This creates a circular border */
+}
+
+.avatar:hover {
+  background-color: #b17f9e;
 }
