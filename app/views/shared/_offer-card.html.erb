@@ -3,11 +3,13 @@
     <div class="offer-card-info">
       <p>Address: <%= offer.listing.address %></p>
       <p>Guest: <%= offer.user.first_name %> <%= offer.user.last_name %></p>
-      <% if offer.status == "pending" %>
-          <div class="btn btn-flat btn-primary btn-home my-3"><%= link_to "Accept", accept_listing_offer_path(offer.listing, offer), data:{turbo_method: :patch, turbo_confirm: :"Are you sure to accept this offer?"}%></div>
-          <div class="btn btn-flat btn-primary btn-home my-3><%= link_to "Reject", reject_listing_offer_path(offer.listing, offer), data:{turbo_method: :patch, turbo_confirm: :"Are you sure to reject this offer?"} %></div>
-        <% else %>
-          <p>Accepted</p>
-      <% end %>
+      <div>
+        <% if offer.status == "pending" %>
+            <div class="btn btn-flat btn-primary btn-home my-3"><%= link_to "Accept", accept_listing_offer_path(offer.listing, offer), data:{turbo_method: :patch, turbo_confirm: :"Are you sure to accept this offer?"}%></div>
+            <div class="btn btn-flat btn-primary btn-home my-3><%= link_to "Reject", reject_listing_offer_path(offer.listing, offer), data:{turbo_method: :patch, turbo_confirm: :"Are you sure to reject this offer?"} %></div>
+          <% else %>
+            <p>Accepted</p>
+        <% end %>
+      </div>
     </div>
   </div>
