@@ -32,7 +32,7 @@
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }
 
-.btn {
+.navbar-nav .btn {
     padding: 10px 20px;
     background-color: #5f0f40;
     color: #fff;
@@ -45,17 +45,17 @@
     height: 45px;
   }
 
-  .avatar {
+  .navbar-nav .avatar {
     border: 1px solid #5f0f40;
     border-radius: 50%;
     background-color: #c7c7c7;
   }
 
-.avatar:hover {
+.navbar.nav .avatar:hover {
   background-color: #b17f9e;
 }
 
-.btn.btn-outline-secondary {
+.navbar-nav .btn.btn-outline-secondary {
   border: 2px solid #5f0f40;
   background-color: #F4F4F4;
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
@@ -65,7 +65,7 @@
 .navbar-nav .btn.btn-outline-secondary {
   color: #5f0f40;
 }
-.btn.btn-outline-secondary:hover {
+.navbar-nav .btn.btn-outline-secondary:hover {
   background-color: #c7c7c7;
 
 }
