@@ -4,7 +4,7 @@
 <%= render 'search_form' %>
 
 <h1 class="py-2">All listings</h1>
-<div class="d-flex justify-content-between">
+<div class="d-flex justify-content-between align-items-start">
   <div class="list-card-container list-index">
       <% @listings.each do |listing| %>
         <%= render "shared/list-card", listing: listing %>

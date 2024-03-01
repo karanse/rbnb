@@ -1,5 +1,5 @@
 <div class = "searchbar px-4">
-  <%= form_with url: "/", method: :get do |form| %>
+  <%= form_with url: listings_path, method: :get do |form| %>
     <div class="d-flex justify-content-between align-items-center">
         <%= form.label :query, "Location:" %>
 

@@ -8,6 +8,10 @@ class ListingsController < ApplicationController
         info_window_html: render_to_string(partial: "info_window", locals: {listing: listing})
       }
     end
+    if params[:query].present?
+      sql_subquery = "city ILIKE :query OR country ILIKE :query"
+      @listings = @listings.where(sql_subquery, query: "%#{params[:query]}%")
+    end
   end
 
   def new
