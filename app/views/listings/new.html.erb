@@ -1,11 +1,21 @@
-<h2>Add your home</h2>
-<%= simple_form_for(@listing) do |f| %>
-  <%= f.input :address %>
-  <%= f.input :category, as: :select, collection: Listing::CATEGORIES %>
-  <%= f.input :price_per_night %>
-  <%= f.input :has_pool %>
-  <%= f.input :has_garden %>
-  <%= f.input :number_of_rooms %>
-  <%= f.input :photos, as: :file, input_html: { multiple: true } %>
-  <%= f.submit class: "btn btn-primary"%>
-<% end %>
+<div class="d-flex flex-column align-items-center">
+
+  <h2>Add your home</h2>
+
+  <div class="mt-4 listing-form">
+    <%= simple_form_for(@listing) do |f| %>
+      <%= f.input :address %>
+      <%= f.input :category, as: :select, collection: Listing::CATEGORIES %>
+      <div class="d-flex align-items-center justify-content-between">
+        <%= f.input :price_per_night, class: "add-home-shared-row" %>
+        <div class="mx-3"></div>
+        <%= f.input :number_of_rooms, class: "add-home-shared-row" %>
+      </div>
+      <%= f.input :has_pool  %>
+      <%= f.input :has_garden %>
+      <%= f.input :photos, as: :file, input_html: { multiple: true } %>
+      <%= f.submit class: "btn btn-primary my-4"%>
+    <% end %>
+  </div>
+
+</div>

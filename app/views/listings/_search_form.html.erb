@@ -1,16 +1,20 @@
-<div class = "searchbar">
+<div class = "searchbar px-4">
   <%= form_with url: "/", method: :get do |form| %>
-    <%= form.label :query, "Location:" %>
-    <% addresses = Listing.distinct.pluck(:address) %>
-    <%= form.select :query, addresses, { include_blank: "Select an address" }, class:"form-control my-3" %>
-    <%= form.label :check_in, "Check in:" %>
-    <%= form.date_field :check_in, class:"form-control my-3" %>
-    <%= form.label :check_out, "Check out:" %>
-    <%= form.date_field :check_out, class:"form-control my-3"%>
-    <%= form.label :who, "Rooms:" %>
-    <%= form.text_field :who, class:"form-control" %>
+    <div class="d-flex justify-content-between align-items-center">
+        <%= form.label :query, "Location:" %>
+        <% addresses = Listing.distinct.pluck(:address) %>
+        <%= form.select :query, addresses, { include_blank: "Select an address" }, class:"form-control my-3 mr-2 search-first-row" %>
+        <%= form.label :who, "Rooms:" %>
+        <%= form.text_field :who, class:"form-control search-first-row my3" %>
+    </div>
+    <div class="d-flex justify-content-between align-items-center" id="dates">
+      <%= form.label :check_in, "Check in:" %>
+      <%= form.date_field :check_in, class:"form-control my-3 search-date", data: { controller: "datepicker" } %>
+      <%= form.label :check_out, "Check out:" %>
+      <%= form.date_field :check_out, class:"form-control my-3 search-date", data: { controller: "datepicker" } %>
+    </div>
     <div>
-    <%= form.submit "Search", class:"btn btn-primary my-3" %>
+    <%= form.submit "Search", class:"btn btn-primary mb-5" %>
     </div>
   <% end %>
 </div>
