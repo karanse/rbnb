@@ -41,6 +41,8 @@
     cursor: pointer;
     transition: background-color 0.3s ease;
     margin-right: 20px;
+    width: 150px;
+    height: 45px;
   }
 
   .avatar {
@@ -56,12 +58,14 @@
 .btn.btn-outline-secondary {
   border: 2px solid #5f0f40;
   background-color: #F4F4F4;
-  color: #5f0f40;
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+  height: 45px;
 }
 
 .navbar-nav .btn.btn-outline-secondary {
   color: #5f0f40;
 }
 .btn.btn-outline-secondary:hover {
-  background-color: #c7c7c7
+  background-color: #c7c7c7;
+
 }
