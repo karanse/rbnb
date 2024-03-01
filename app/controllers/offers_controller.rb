@@ -24,6 +24,21 @@ class OffersController < ApplicationController
 
   def show; end
 
+  def accept
+    @offer = Offer.find(params[:id])
+    @offer.status = "accepted"
+    @offer.save
+    redirect_to dashboard_path
+  end
+
+  def reject
+    @offer = Offer.find(params[:id])
+    @offer.status = "rejected"
+    @offer.save
+    redirect_to dashboard_path
+
+  end
+
   private
 
   def set_listing
