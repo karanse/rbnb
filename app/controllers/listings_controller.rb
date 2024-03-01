@@ -16,6 +16,8 @@ class ListingsController < ApplicationController
   def create
     @listing = Listing.new(listing_params)
     @listing.user = current_user # current_user comes from devise authentication
+    # @city = Geocoder.search(@listing.address).first.city
+    # @country = Geocoder.search(@listing.address).first.country
     if @listing.save
       redirect_to listing_path(@listing)
     else
