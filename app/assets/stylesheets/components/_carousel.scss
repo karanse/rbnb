@@ -1,0 +1,13 @@
+.carousel .carousel-item {
+  height: 550px;
+}
+
+.carousel-img {
+    object-fit: cover;
+    max-height: 100%;
+}
+
+.carousel-control-next,
+.carousel-control-prev {
+    filter: invert(100%);
+}

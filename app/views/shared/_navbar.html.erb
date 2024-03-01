@@ -11,10 +11,21 @@
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav ml-auto">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="/">Home</a>
+          <a class="btn btn-primary" aria-current="page" href="/listings/new">Add a home</a>
         </li>
+
         <li class="nav-item">
-          <a class="nav-link" href="/users/sign_in">Log in</a>
+          <% if  user_signed_in? %>
+              <%= button_to(
+                "Log Out",
+                destroy_user_session_path,
+                method: :delete, class: "btn btn-outline-primary")%>
+
+            <%# <a class="nav-link" href="/users/sign_out">Log out</a> %>
+          <% else %>
+            <%= link_to "Log in", new_user_session_path, class: "btn btn-primary" %>
+            <%# <a class="nav-link" href="/users/sign_in">Log in</a> %>
+          <% end %>
         </li>
       </ul>
     </div>

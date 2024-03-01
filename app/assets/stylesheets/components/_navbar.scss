@@ -14,7 +14,7 @@
   margin-left: auto;
 }
 
-.navbar-nav .nav-link {
+.navbar-nav .btn {
   padding: 10px 20px;
   background-color: #5f0f40;
   color: #fff !important;
@@ -22,14 +22,13 @@
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease;
-  margin-right: 10px;
+  margin-right: 20px;
 }
 
-.navbar-nav .nav-item:last-child .nav-link {
-  margin-right: 0;
-}
-
-.navbar-nav .nav-link:hover {
+.navbar-nav .btn:hover {
   background-color: #9a031e;
+}
+
+.navbar-nav .btn.btn-primary {
   box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
 }

@@ -1,22 +1,71 @@
-<h2> Details of this <%= @listing.category %> </h2>
-
-<div class="container">
-  <%= cl_image_tag @listing.photos.first.key, height: 300, width: 300, crop: :auto %>
+<%# ------------------------PHOTOS------------------------------ %>
+<div id="carousel-container-show" class="pb-3">
+  <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+    <div class="carousel-inner">
+      <% @listing.photos.each_with_index do |photo, index| %>
+          <%= render "shared/carousel", photo: photo, index: index %>
+      <% end %>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+  </div>
 </div>
 
-<div class="stay-details-list">
-  <ul class="list-group mt-3">
-    <li class="list-group-item">Address: <%= @listing.address %></li>
-    <li class="list-group-item">Price per night: € <%= @listing.price_per_night %></li>
-    <li class="list-group-item">Rooms: <%= @listing.number_of_rooms %></li>
-    <li class="list-group-item">Pool: <%= @listing.has_pool ? "yes" : "no" %></li>
-    <li class="list-group-item">Garden: <%= @listing.has_garden ? "yes" : "no" %></li>
-    <li class="list-group-item">Rating: <%= @listing.rating.nil? ? "no rating" : "⭐️" * @listing.rating %></li>
-  </ul>
-</div>
+<%# ------------------------HEADER------------------------------ %>
 
-<div class="d-flex align-items-center">
-  <div class="btn btn-flat btn-primary btn-home my-3"><%= link_to "Make booking request", new_listing_offer_path(@listing, @offer) %></div>
-  <div class="btn btn-flat btn-primary btn-home mx-3 my-3"><%= link_to "Back to all", listings_index_path %></div>
-  <span class="flex-grow-1"></span>
+<h2 class="text-center py-3"> Details of this <%= @listing.category.downcase %> <%= @listing.rating.nil? ? "" : "⭐️" * @listing.rating %> </h2>
+
+<div class="d-flex flex-column align-items-center">
+  <div class="w-50">
+  <%# ------------------------DETAILS------------------------------ %>
+    <div class="card mb-3 text-center">
+      <div class="card-header">
+        <h5 class="pt-2">Address</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-title pt-2"><%= @listing.address %></p>
+      </div>
+    </div>
+
+    <div class="card mb-3 text-center">
+      <div class="card-header">
+        <h5 class="pt-2">Category</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-title pt-2"><%= @listing.category %></p>
+      </div>
+    </div>
+
+    <div class="card my-3 text-center">
+      <div class="card-header">
+        <h5 class="pt-2">Price per night</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-title pt-2">€ <%= @listing.price_per_night %></p>
+      </div>
+    </div>
+
+    <div class="card my-3 text-center">
+      <div class="card-header">
+        <h5 class="pt-2">Amenities</h5>
+      </div>
+      <div class="card-body">
+        <p class="card-title"> Number of rooms: <%= @listing.number_of_rooms %> </p>
+        <p class="card-title"> <%= @listing.has_garden ? "Garden" : "" %> </p>
+        <p class="card-title"> <%= @listing.has_pool ? "Pool" : "" %> </p>
+      </div>
+    </div>
+  </div>
+  <%# ------------------------BUTTONS------------------------------ %>
+  <div class="d-flex align-items-center">
+    <div class="btn btn-flat btn-primary btn-home my-3"><%= link_to "Make booking request", new_listing_offer_path(@listing, @offer) %></div>
+    <div class="btn btn-flat btn-primary btn-home mx-3 my-3"><%= link_to "Back to all", listings_index_path %></div>
+    <span class="flex-grow-1"></span>
+  </div>
 </div>
