@@ -1,11 +1,22 @@
-<h2 class="pb-2">Submit your reservation request</h2>
+<div class="d-flex flex-column align-items-center">
+  <h2 class="pb-4">Submit your booking request</h2>
 
-<div id="reservation-form">
-  <%# note -- start & end_date/total_price are not yet connected, so don't work %>
-  <%= simple_form_for [@listing, @offer] do |f| %>
-    <%= f.input :start_date %>
-    <%= f.input :end_date %>
-    <%= f.input :comment %>
-    <%= f.submit "submit request", class: "btn btn-primary"%>
-  <% end %>
+  <div id="reservation-form" class="">
+    <%= simple_form_for [@listing, @offer] do |f| %>
+      <div class="d-flex justify-content-between align-items-center">
+        <%= f.input :start_date,
+                    as: :string,
+                    input_html: { data: { controller: "datepicker" } },
+                    class: "booking-first-row" %>
+        <%= f.input :end_date,
+                    as: :string,
+                    input_html: { data: { controller: "datepicker" } },
+                    class: "booking-first-row"  %>
+      </div>
+      <%= f.input :comment %>
+      <div class="d-flex justify-content-start">
+        <%= f.submit "Submit", class: "btn btn-primary my-4"%>
+      </div>
+    <% end %>
+  </div>
 </div>

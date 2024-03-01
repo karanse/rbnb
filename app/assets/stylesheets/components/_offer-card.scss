@@ -1,20 +1,15 @@
+// COMMENT: !! DO NOT CHANGE ANY STYLING DUE TO POSSIBLE CONFLICT W/LIST-CARD CSS STYLING 
+
 .list-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 3em;
 }
 
-// @media screen and (max-width: 768px) {
-//   .list-card-container {
-//     grid-template-columns: 1fr; /* Adjusted to display one item per row on mobile devices */
-//   }
-// }
-
 .list-card {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 10px rgba(0,0,0,0.2);
-  // width: 100%;
 }
 
 .list-card > .img {
@@ -40,7 +35,7 @@
   margin: 0;
 }
 
-.list-card .list-card-info {
+.list-card .offer-card-info {
   padding: 16px;
   display: flex;
   justify-content: space-between;
