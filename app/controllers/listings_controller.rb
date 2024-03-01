@@ -4,7 +4,8 @@ class ListingsController < ApplicationController
     @markers = @listings.geocoded.map do |listing|
       {
         lat: listing.latitude,
-        lng: listing.longitude
+        lng: listing.longitude,
+        info_window_html: render_to_string(partial: "info_window", locals: {listing: listing})
       }
     end
   end
