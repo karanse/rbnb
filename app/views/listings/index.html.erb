@@ -4,12 +4,15 @@
 <%= render 'search_form' %>
 
 <h1 class="py-2">All listings</h1>
-<div class="list-card-container">
-  <% @listings.each do |listing| %>
-    <%= render "shared/list-card", listing: listing %>
-  <% end %>
+<div class="d-flex">
+  <div class="list-card-container">
+      <% @listings.each do |listing| %>
+        <%= render "shared/list-card", listing: listing %>
+      <% end %>
+  </div>
+  <div id="map" class="d-none" style="width: 100%; height: 600px;"
+      data-controller="map"
+      data-map-markers-value="<%= @markers.to_json %>"
+      data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+  </div>
 </div>
-<div style="width: 100%; height: 600px;"
-  data-controller="map"
-  data-map-markers-value="<%= @markers.to_json %>"
-  data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>"></div>
