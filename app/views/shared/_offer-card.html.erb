@@ -1,11 +1,11 @@
   <div class="list-card">
     <div class="img" style="background-image: url('<%= offer.listing.photos.attached? ? (cl_image_path offer.listing.photos.first.key) : 'https://source.unsplash.com/random/?vacation'%>')"> </div>
-    <div class="offer-card-info">
-      <p>Address: <%= offer.listing.address %></p>
-      <p>Guest: <%= offer.user.first_name %> <%= offer.user.last_name %></p>
+    <div class="offer-card-info flex-column align-items-center ">
+      <p><strong>Address:</strong> <%= offer.listing.address %></p>
+      <p><strong>Guest:</strong> <%= offer.user.first_name %> <%= offer.user.last_name %></p>
       <div>
         <% if offer.status == "pending" %>
-            <div class="btn btn-flat btn-primary btn-home my-3"><%= link_to "Accept", accept_listing_offer_path(offer.listing, offer), data:{turbo_method: :patch, turbo_confirm: :"Are you sure to accept this offer?"}%></div>
+            <div class="btn btn-flat btn-primary btn-home my-3 me-2"><%= link_to "Accept", accept_listing_offer_path(offer.listing, offer), data:{turbo_method: :patch, turbo_confirm: :"Are you sure to accept this offer?"}%></div>
             <div class="btn btn-flat btn-primary btn-home my-3><%= link_to "Reject", reject_listing_offer_path(offer.listing, offer), data:{turbo_method: :patch, turbo_confirm: :"Are you sure to reject this offer?"} %></div>
           <% else %>
             <p>Accepted</p>
